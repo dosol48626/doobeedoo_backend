@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/accounts/', include('accounts.urls')),
     path('api/todos/', include('todos.urls')),
+    path('api/routines/', include('routines.urls')),
 ]
 
 # 개발 환경에서만! MEDIA_URL로 시작하는 요청을 MEDIA_ROOT에서 찾아 서빙

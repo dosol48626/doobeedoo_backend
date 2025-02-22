@@ -21,6 +21,10 @@ class TodoViewSet(viewsets.ModelViewSet):
         qs = super().get_queryset()
         qs = qs.filter(user=self.request.user)
 
+        routine_id = self.request.query_params.get('routine')
+        if routine_id:
+            qs = qs.filter(routine=routine_id)
+
         # 중요도 필터 (만약 ?priority=RED 라면, RED & 미완료인 것만)
         priority = self.request.query_params.get('priority')
         if priority:
