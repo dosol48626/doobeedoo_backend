@@ -2,6 +2,7 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
+from rest_framework.views import APIView
 
 from datetime import date
 from .models import Todo
@@ -77,3 +78,12 @@ class TodoViewSet(viewsets.ModelViewSet):
             {"message": "토글 완료", "complete": todo.complete},
             status=status.HTTP_200_OK
         )
+
+class TodoScoreView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        completed_todos = Todo.objects.filter(user=user, complete=True).count()
+        score = completed_todos * 2  # 완료된 투두 1개당 10점
+        return Response({"score": score})
