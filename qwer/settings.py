@@ -6,8 +6,8 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 미디어 파일 관련 설정
-MEDIA_URL = '/media/'  # URL 접근 시 prefix (예: http://127.0.0.1:8000/media/...)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 실제 파일을 저장할 로컬 디렉터리
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -47,8 +47,8 @@ REST_FRAMEWORK = {
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # 토큰 유효기간 1시간
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # 리프레시 토큰 7일
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),   
 }
 
 
@@ -90,11 +90,11 @@ WSGI_APPLICATION = "qwer.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dodo',       # 변경된 스키마 이름
-        'USER': 'dosol',      # 사용자명
-        'PASSWORD': '1234',   # 비밀번호
-        'HOST': 'localhost',  # DB 호스트
-        'PORT': '3306',       # 기본 포트
+        'NAME': 'dodo',     
+        'USER': 'dosol',    
+        'PASSWORD': '1234', 
+        'HOST': 'localhost',
+        'PORT': '3306',     
         'OPTIONS': {
             'charset': 'utf8mb4'
         },
