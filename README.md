@@ -13,11 +13,22 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 
 ---
 
+## 🛠 **설치 및 실행 방법**  
+
+### 📌 **1️⃣ 환경 설정 (Anaconda + Python 3.11)**
+아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
+
+```sh
 # 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
 cd 폴더명  # 프로젝트 폴더로 이동
 
-# 2️⃣ 필수 패키지 설치
+# 3️⃣ 필수 패키지 설치
 pip install -r requirements.txt
+
+실행이 안된다면-
+# 2️⃣ 가상 환경 생성
+conda create -n doobee_env python=3.11
+conda activate doobee_env
 
 ---
 
@@ -65,20 +76,3 @@ pip install -r requirements.txt
 | **루틴별 투두 조회** | `GET` | `/api/todos/?routine={루틴ID}` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 
 ---
-
-## 🛠 **설치 및 실행 방법**  
-
-### 📌 **1️⃣ 환경 설정 (Anaconda + Python 3.11)**
-아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
-
-```sh
-# 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
-cd 폴더명  # 프로젝트 폴더로 이동
-
-# 3️⃣ 필수 패키지 설치
-pip install -r requirements.txt
-
-실행이 안된다면-
-# 2️⃣ 가상 환경 생성
-conda create -n doobee_env python=3.11
-conda activate doobee_env
