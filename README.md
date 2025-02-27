@@ -10,7 +10,16 @@ api/todos/score가 계속 불러와진다고요?
 
 api명세서
 회원 기능 명세서
-https://www.notion.so/API-1a15f780fad780d68d22fae94fb73dbd?pvs=4#1a15f780fad7802da4e6dbe77082540f
+| 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
+|------|------------|------------|-------------|-------------|
+| **회원가입** | `POST` | `/api/accounts/register/` | `username`<br>`nickname`<br>`password` | 없음 |
+| **로그인** | `POST` | `/api/accounts/login/` | `username`<br>`password` | 없음 |
+| **로그아웃** | `POST` | `/api/accounts/logout/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
+| **비밀번호 변경** | `PUT` | `/api/accounts/password_change/` | `old_password`<br>`new_password` | `Authorization: Bearer [액세스 토큰]` |
+| **회원 탈퇴** | `DELETE` | `/api/accounts/delete_account/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
+| **토큰 유효성 검증** | `POST` | `/api/accounts/token/verify/` | `token` | `Authorization: Bearer [액세스 토큰]` |
+
+
 
 루틴 기능 명세서
 https://www.notion.so/API-1a15f780fad780d68d22fae94fb73dbd?pvs=4#1a15f780fad7807e8d32e23589ba69ef
