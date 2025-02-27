@@ -15,8 +15,6 @@ urlpatterns += [
 ]
 #urlpatterns이 두개인 이유는 위에꺼는 APIVIEW고 밑에꺼는 VIEWSET이기 때문임.
 
-#https://docs.djangoproject.com/en/5.1/topics/http/urls/ 여기 참고했음.
-
 # 점수 조회:
 # GET /api/todos/score/
 

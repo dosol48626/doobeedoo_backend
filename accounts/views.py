@@ -59,7 +59,3 @@ class DeleteAccountView(APIView):
         user = request.user
         user.delete()
         return Response({"message": "회원 탈퇴가 완료되었습니다."}, status=status.HTTP_200_OK)
-
-
-#https://www.django-rest-framework.org/api-guide/views/ 여기 참고함.
-#https://www.django-rest-framework.org/api-guide/authentication/ 여기 참고함.
