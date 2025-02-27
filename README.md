@@ -14,10 +14,6 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 
 ---
 
-## 📊 **ERD (데이터베이스 설계)**  
-(⚠ ERD 이미지 삽입 필요)  
-📌 ERD는 `media/todo_images/dodoERD.png`에 저장되어 있습니다.  
-
 ---
 
 ## 📜 **API 명세서**  
