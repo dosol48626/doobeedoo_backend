@@ -63,12 +63,16 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 ## 🛠 **설치 및 실행 방법**  
 
 ### 📌 **1️⃣ 환경 설정 (Anaconda + Python 3.11)**
-아래 명령어로 가상 환경을 생성하고 필요한 패키지를 설치하세요.  
+아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
 
 ```sh
-# 가상 환경 생성
+# 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
+cd 폴더명  # 프로젝트 폴더로 이동
+
+# 2️⃣ 가상 환경 생성
 conda create -n doobee_env python=3.11
 conda activate doobee_env
 
-# 필수 패키지 설치
+# 3️⃣ 필수 패키지 설치
 pip install -r requirements.txt
+
