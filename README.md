@@ -1,15 +1,29 @@
-두비두 프로젝트 백엔드 깃허브 입니다.
-ERD, API명세서, 데이터베이스 설정, 아나콘다…해줘야하나?
-파이썬 3.11 아나콘다
-데이터 베이스 mysql사용
+# 🎵 두비두 프로젝트 - 백엔드  
 
+## 📌 프로젝트 개요  
+**두비두 프로젝트**는 사용자가 하루를 효과적으로 계획하고 실행할 수 있도록 돕는 **루틴 및 투두 관리 서비스**입니다.  
+Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, **MySQL**을 데이터베이스로 사용합니다.  
 
-api/todos/score가 계속 불러와진다고요?
+---
 
-네 그거 맞아요…ㅠㅠ
+## 🛠 **기술 스택**  
+- **백엔드**: Django, Django REST Framework (DRF)  
+- **데이터베이스**: MySQL  
+- **환경**: Python 3.11 (Anaconda)  
+- **인증 방식**: JWT (JSON Web Token)  
 
-api명세서
-회원 기능 명세서
+---
+
+## 📊 **ERD (데이터베이스 설계)**  
+(⚠ ERD 이미지 삽입 필요)  
+📌 ERD는 `media/todo_images/dodoERD.png`에 저장되어 있습니다.  
+
+---
+
+## 📜 **API 명세서**  
+
+### 🛠 **1. 회원 기능**  
+
 | 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
 |------|------------|------------|-------------|-------------|
 | **회원가입** | `POST` | `/api/accounts/register/` | `username`<br>`nickname`<br>`password` | 없음 |
@@ -19,10 +33,9 @@ api명세서
 | **회원 탈퇴** | `DELETE` | `/api/accounts/delete_account/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 | **토큰 유효성 검증** | `POST` | `/api/accounts/token/verify/` | `token` | `Authorization: Bearer [액세스 토큰]` |
 
+---
 
-
-투두 기능 명세서
-### ✅ 투두 관련 API
+### ✅ **2. 투두 기능**  
 
 | 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
 |------|------------|------------|-------------|-------------|
@@ -37,11 +50,9 @@ api명세서
 | **완료 상태 토글** | `POST` | `/api/todos/{id}/toggle/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 | **점수 조회** | `GET` | `/api/todos/score/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 
+---
 
-
-
-루틴 기능 명세서
-### 🗂 루틴 관련 API
+### 🗂 **3. 루틴 기능**  
 
 | 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
 |------|------------|------------|-------------|-------------|
@@ -51,3 +62,18 @@ api명세서
 | **루틴 수정** | `PUT` | `/api/routines/{id}/` | `name` | `Authorization: Bearer [액세스 토큰]` |
 | **루틴 삭제** | `DELETE` | `/api/routines/{id}/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 | **루틴별 투두 조회** | `GET` | `/api/todos/?routine={루틴ID}` | 없음 | `Authorization: Bearer [액세스 토큰]` |
+
+---
+
+## 🛠 **설치 및 실행 방법**  
+
+### 📌 **1️⃣ 환경 설정 (Anaconda + Python 3.11)**
+아래 명령어로 가상 환경을 생성하고 필요한 패키지를 설치하세요.  
+
+```sh
+# 가상 환경 생성
+conda create -n doobee_env python=3.11
+conda activate doobee_env
+
+# 필수 패키지 설치
+pip install -r requirements.txt
