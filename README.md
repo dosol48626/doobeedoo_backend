@@ -10,8 +10,14 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 - **백엔드**: Django, Django REST Framework (DRF)  
 - **데이터베이스**: MySQL  
 - **환경**: Python 3.11 (Anaconda)  
-- **인증 방식**: JWT (JSON Web Token)  
 
+---
+
+# 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
+cd 폴더명  # 프로젝트 폴더로 이동
+
+# 2️⃣ 필수 패키지 설치
+pip install -r requirements.txt
 
 ---
 
@@ -69,10 +75,10 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 # 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
 cd 폴더명  # 프로젝트 폴더로 이동
 
-# 2️⃣ 가상 환경 생성
-conda create -n doobee_env python=3.11
-conda activate doobee_env
-
 # 3️⃣ 필수 패키지 설치
 pip install -r requirements.txt
 
+실행이 안된다면-
+# 2️⃣ 가상 환경 생성
+conda create -n doobee_env python=3.11
+conda activate doobee_env
