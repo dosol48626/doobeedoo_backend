@@ -7,9 +7,9 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 ---
 
 ## 🛠 **기술 스택**  
-- **백엔드**: Django, Django REST Framework (DRF)  
+- **백엔드**: Django, Django REST Framework
 - **데이터베이스**: MySQL  
-- **환경**: Python 3.11 (Anaconda)  
+- **환경**: Python 3.11
 
 ---
 
