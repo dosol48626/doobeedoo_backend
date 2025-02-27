@@ -9,6 +9,8 @@ urlpatterns = [
     path('', include(router.urls)),
 ]
 
+
+
 # 루틴 생성: POST /api/routines/ → {"name": "아침 루틴"}
 # 전체 조회: GET /api/routines/
 # 상세 조회: GET /api/routines/1/

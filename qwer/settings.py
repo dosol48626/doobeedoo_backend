@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "todos",
     "routines",
+    "corsheaders",
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -47,12 +48,18 @@ REST_FRAMEWORK = {
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),   
 }
 
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -90,7 +97,7 @@ WSGI_APPLICATION = "qwer.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dodo',     
+        'NAME': 'dodo1',     
         'USER': 'dosol',    
         'PASSWORD': '1234', 
         'HOST': 'localhost',
@@ -100,6 +107,8 @@ DATABASES = {
         },
     }
 }
+# MySql 사용했습니다.
+# Name User Password Host Port 설정해주시면 됩니다.
 
 
 

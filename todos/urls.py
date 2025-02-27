@@ -2,18 +2,20 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import TodoViewSet, TodoScoreView
 
-# ✅ score 경로를 먼저 선언
 urlpatterns = [
-    path('score/', TodoScoreView.as_view(), name='todo-score'),  # 이걸 먼저!
+    path('score/', TodoScoreView.as_view(), name='todo-score'),
 ]
+#이거는 APIVIEW써서 이거 해줘야함. 그리고 몰랐는데 이거를 맨위로 올려줘야 작동을 하네;;
 
-# ✅ 그 다음에 router 등록
 router = DefaultRouter()
 router.register('', TodoViewSet, basename='todo')
 
 urlpatterns += [
     path('', include(router.urls)),
 ]
+#urlpatterns이 두개인 이유는 위에꺼는 APIVIEW고 밑에꺼는 VIEWSET이기 때문임.
+
+#https://docs.djangoproject.com/en/5.1/topics/http/urls/ 여기 참고했음.
 
 # 점수 조회:
 # GET /api/todos/score/

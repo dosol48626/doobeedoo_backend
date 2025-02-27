@@ -1,7 +1,7 @@
 # todos/models.py
 from django.db import models
 from django.conf import settings
-from routines.models import Routine  # 루틴 모델 임포트
+from routines.models import Routine 
 
 class PriorityChoices(models.TextChoices):
     BLACK = 'BLACK', 'BLACK'
@@ -25,7 +25,6 @@ class Todo(models.Model):
         default=PriorityChoices.BLACK
     )
 
-    # 새로 추가: routine FK
     routine = models.ForeignKey(Routine, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):

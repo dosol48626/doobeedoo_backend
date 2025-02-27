@@ -9,7 +9,6 @@ class UserSerializer(serializers.ModelSerializer):
             'password': {'write_only': True}
         }
 
-    # 비밀번호 암호화 후 저장
     def create(self, validated_data):
         user = CustomUser.objects.create_user(
             username=validated_data['username'],
