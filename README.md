@@ -12,7 +12,6 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 - **환경**: Python 3.11 (Anaconda)  
 - **인증 방식**: JWT (JSON Web Token)  
 
----
 
 ---
 
