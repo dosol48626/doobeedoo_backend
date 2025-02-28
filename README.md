@@ -65,6 +65,19 @@ conda activate doobee_env
 
 ---
 
+## 3. 루틴 기능
+
+| 기능             | HTTP 메서드 | 엔드포인트          | Body (JSON) | 토큰 (헤더)                        |
+|------------------|-------------|---------------------|------------|------------------------------------|
+| **루틴 생성**    | `POST`      | `/api/routines/`    | `name`     | `Authorization: Bearer [액세스 토큰]` |
+| **루틴 조회**    | `GET`       | `/api/routines/`    | 없음       | `Authorization: Bearer [액세스 토큰]` |
+| **루틴 상세 조회**| `GET`      | `/api/routines/{id}/` | 없음       | `Authorization: Bearer [액세스 토큰]` |
+| **루틴 수정**    | `PUT`       | `/api/routines/{id}/` | `name`     | `Authorization: Bearer [액세스 토큰]` |
+| **루틴 삭제**    | `DELETE`    | `/api/routines/{id}/` | 없음       | `Authorization: Bearer [액세스 토큰]` |
+| **루틴별 투두 조회**| `GET`     | `/api/todos/?routine={루틴ID}` | 없음 | `Authorization: Bearer [액세스 토큰]` |
+
+
+
 ### 🗂 **3. 루틴 기능**  
 
 | 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
