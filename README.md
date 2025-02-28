@@ -6,16 +6,16 @@ Python **3.11** 및 **Django REST Framework** 기반으로 개발되었으며, *
 
 ---
 
-## 🛠 **기술 스택**  
-- **백엔드**: Django, Django REST Framework
+## 🛠 기술 스택  
+- **백엔드**: Django, Django REST Framework  
 - **데이터베이스**: MySQL  
-- **환경**: Python 3.11
+- **환경**: Python 3.11  
 
 ---
 
-## 🛠 **설치 및 실행 방법**  
+## 🛠 설치 및 실행 방법  
 
-### 📌 **1️⃣ 환경 설정 (Anaconda + Python 3.11)**
+### 📌 1️⃣ 환경 설정 (Anaconda + Python 3.11)  
 아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
 
 ```sh
