@@ -30,24 +30,7 @@ pip install -r requirements.txt
 conda create -n doobee_env python=3.11
 conda activate doobee_env
 
-# 데이터베이스
 
-setting파일에서
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'NAME',     
-        'USER': 'USER',    
-        'PASSWORD': 'PASSWORD', 
-        'HOST': 'localhost',
-        'PORT': '3306',     
-        'OPTIONS': {
-            'charset': 'utf8mb4'
-        },
-    }
-}
----
 ---
 
 ## 📜 **API 명세서**  
