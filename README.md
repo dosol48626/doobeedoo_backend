@@ -53,7 +53,8 @@ python manage.py migrate
 # 실행방법 요약
 
 깃 클론 (깃주소) -> cd 폴더 -> qwer폴더의 setting.py의 database 설정 -> pip install -r requirements.txt (시간이 조금 걸림.)
- -> 마이그레이션python manage.py makemigrations -> python manage.py runserver
+ -> 마이그레이션python manage.py makemigrations -> python manage.py migrate -> python manage.py runserver
+ 
 ---
 ---
 ## 📜 **API 명세서**  
