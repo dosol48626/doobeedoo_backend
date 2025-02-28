@@ -25,13 +25,13 @@ ppt다운로드를 하시면, 포트폴리오 내 링크 이동이 가능합니�
 ### 📌 1️⃣ 환경 설정 (Anaconda + Python 3.11)  
 아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
 
-# 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
+ 1️⃣ 프로젝트 폴더로 이동 (GitHub에서 클론한 경우)
 cd 폴더명  # 프로젝트 폴더로 이동
 
-# 2️⃣ 필수 패키지 설치
+ 2️⃣ 필수 패키지 설치
 pip install -r requirements.txt
 
-# 3️⃣ 실행이 안된다면 - 가상 환경 생성 및 활성화
+ 3️⃣ 실행이 안된다면 - 가상 환경 생성 및 활성화
 python -m venv doobee_env  # 가상환경 생성
 source doobee_env/bin/activate  # Mac/Linux
 doobee_env\Scripts\activate  # Windows
