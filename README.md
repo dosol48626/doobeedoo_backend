@@ -37,8 +37,8 @@ source doobee_env/bin/activate  # Mac/Linux
 doobee_env\Scripts\activate  # Windows
 
 # (아나콘다 사용 시)
-# conda create -n doobee_env python=3.11
-# conda activate doobee_env
+ conda create -n doobee_env python=3.11
+ conda activate doobee_env
 
 ### 📌 2️⃣ 데이터베이스 설정
 setting.py에서 데이터베이스를 설정해주셔야합니다.
