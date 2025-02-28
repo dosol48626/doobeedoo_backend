@@ -31,15 +31,7 @@ cd 폴더명  # 프로젝트 폴더로 이동
  2️⃣ 필수 패키지 설치
 pip install -r requirements.txt
 
- 3️⃣ 실행이 안된다면 - 가상 환경 생성 및 활성화
-python -m venv doobee_env  # 가상환경 생성
-source doobee_env/bin/activate  # Mac/Linux
-doobee_env\Scripts\activate  # Windows
-
-# (아나콘다 사용 시)
- conda create -n doobee_env python=3.11
  ---
- conda activate doobee_env
 
 ### 📌 2️⃣ 데이터베이스 설정
 setting.py에서 데이터베이스를 설정해주셔야합니다.
