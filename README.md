@@ -49,8 +49,9 @@ python manage.py makemigrations
 
 # 데이터베이스 업데이트 (마이그레이션 적용)
 python manage.py migrate
----
 
+---
+---
 ## 📜 **API 명세서**  
 
 ### 🛠 **1. 회원 기능**  
