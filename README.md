@@ -21,6 +21,7 @@ ppt다운로드를 하시면, 포트폴리오 내 링크 이동이 가능합니�
 
 ## 🛠 설치 및 실행 방법  
 
+
 ### 📌 1️⃣ 환경 설정 (Anaconda + Python 3.11)  
 아래 명령어를 차례대로 실행하여 환경을 설정하세요.  
 
@@ -30,18 +31,24 @@ cd 폴더명  # 프로젝트 폴더로 이동
 # 2️⃣ 필수 패키지 설치
 pip install -r requirements.txt
 
-# 3️⃣ 실행이 안된다면-가상 환경 생성
-conda create -n doobee_env python=3.11
-conda activate doobee_env
+# 3️⃣ 실행이 안된다면 - 가상 환경 생성 및 활성화
+python -m venv doobee_env  # 가상환경 생성
+source doobee_env/bin/activate  # Mac/Linux
+doobee_env\Scripts\activate  # Windows
 
-# 데이터 베이스 설정
+# (아나콘다 사용 시)
+# conda create -n doobee_env python=3.11
+# conda activate doobee_env
+
+### 📌 2️⃣ 데이터베이스 설정
 setting.py에서 데이터베이스를 설정해주셔야합니다.
-이후 
-python manage.py makemigrations
 ---
-python manage.py migrate
-로 DB 업데이트 후 실행하시면 됩니다.
+# 마이그레이션 파일 생성
+python manage.py makemigrations
 
+# 데이터베이스 업데이트 (마이그레이션 적용)
+python manage.py migrate
+---
 
 ## 📜 **API 명세서**  
 
