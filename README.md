@@ -38,6 +38,7 @@ conda activate doobee_env
 setting.py에서 데이터베이스를 설정해주셔야합니다.
 이후 
 python manage.py makemigrations
+---
 python manage.py migrate
 로 DB 업데이트 후 실행하시면 됩니다.
 
