@@ -98,7 +98,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dodo1',     
-        'USER': 'dosol',    
+        'USER': 'ssd',    
         'PASSWORD': '1234', 
         'HOST': 'localhost',
         'PORT': '3306',     
