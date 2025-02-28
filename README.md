@@ -32,7 +32,6 @@ conda activate doobee_env
 
 
 
-
 ## 📜 **API 명세서**  
 
 ### 🛠 **1. 회원 기능**  
@@ -67,19 +66,6 @@ conda activate doobee_env
 
 ## 3. 루틴 기능
 
-| 기능             | HTTP 메서드 | 엔드포인트          | Body (JSON) | 토큰 (헤더)                        |
-|------------------|-------------|---------------------|------------|------------------------------------|
-| **루틴 생성**    | `POST`      | `/api/routines/`    | `name`     | `Authorization: Bearer [액세스 토큰]` |
-| **루틴 조회**    | `GET`       | `/api/routines/`    | 없음       | `Authorization: Bearer [액세스 토큰]` |
-| **루틴 상세 조회**| `GET`      | `/api/routines/{id}/` | 없음       | `Authorization: Bearer [액세스 토큰]` |
-| **루틴 수정**    | `PUT`       | `/api/routines/{id}/` | `name`     | `Authorization: Bearer [액세스 토큰]` |
-| **루틴 삭제**    | `DELETE`    | `/api/routines/{id}/` | 없음       | `Authorization: Bearer [액세스 토큰]` |
-| **루틴별 투두 조회**| `GET`     | `/api/todos/?routine={루틴ID}` | 없음 | `Authorization: Bearer [액세스 토큰]` |
-
-
-
-### 🗂 **3. 루틴 기능**  
-
 | 기능 | HTTP 메서드 | 엔드포인트 | Body (JSON) | 토큰 (헤더) |
 |------|------------|------------|-------------|-------------|
 | **루틴 생성** | `POST` | `/api/routines/` | `name` | `Authorization: Bearer [액세스 토큰]` |
@@ -88,20 +74,3 @@ conda activate doobee_env
 | **루틴 수정** | `PUT` | `/api/routines/{id}/` | `name` | `Authorization: Bearer [액세스 토큰]` |
 | **루틴 삭제** | `DELETE` | `/api/routines/{id}/` | 없음 | `Authorization: Bearer [액세스 토큰]` |
 | **루틴별 투두 조회** | `GET` | `/api/todos/?routine={루틴ID}` | 없음 | `Authorization: Bearer [액세스 토큰]` |
-
----
-
-
-📜 API 명세서
-🛠 1. 회원 기능
-기능	HTTP 메서드	엔드포인트	Body (JSON)	토큰 (헤더)
-회원가입	POST	/api/accounts/register/	username
-nickname
-password	없음
-로그인	POST	/api/accounts/login/	username
-password	없음
-로그아웃	POST	/api/accounts/logout/	없음	Authorization: Bearer [액세스 토큰]
-비밀번호 변경	PUT	/api/accounts/password_change/	old_password
-new_password	Authorization: Bearer [액세스 토큰]
-회원 탈퇴	DELETE	/api/accounts/delete_account/	없음	Authorization: Bearer [액세스 토큰]
-토큰 유효성 검증	POST	/api/accounts/token/verify/	token	Authorization: Bearer [액세스 토큰]
